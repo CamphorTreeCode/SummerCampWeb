@@ -1,0 +1,10 @@
+/**app.wxss**/
+.lf{
+ float: left
+}
+.cl{
+  clear:both;
+}
+.ri{
+  float: right;
+}

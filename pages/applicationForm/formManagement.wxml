@@ -1,0 +1,13 @@
+<!--pages/applicationForm/formManagement.wxml-->
+<view class="formBody">
+  <view class="formItem" wx:for="{{enlistList}}" >
+  <view class="titleLeft lf">
+    <view class="formTitle">{{item.order.releaseProject[0].relaaseProjectTitle}}</view>
+    <view class="formState">{{item.orderState==0?'完善':'未完善'}}</view>
+</view>
+  <view class="titleRight ri">
+    <view class="updates" data-enlistid="{{item.enlistId}}"  data-orderid="{{item.order.orderId}}"   catchtap='updateEnlistPage'>修改</view>
+    <view class="payTime">付款时间 {{item.order.orderPayCreatTime}}</view>
+</view>
+</view>
+</view>

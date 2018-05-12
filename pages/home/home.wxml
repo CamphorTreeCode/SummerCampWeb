@@ -1,0 +1,33 @@
+<!-- 轮播图 -->
+  <view class="container">
+     <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#fff" indicator-active-color="#8B0000" circular="true">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item.swiperUrl}}" class="slide-image" data-releaseprojectid='{{item.releaseProjectId}}' bindtap='locatingProject'/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="total">
+      <image src="../../image/shouye/jingxuan.png"></image>
+      <text>精选项目</text>
+    </view>
+<!-- 关于 -->
+ <block wx:for="{{Selected}}">
+    <view class="about" data-releaseprojectid="{{item.releaseProjectId}}" bindtap='locatingProject'>
+        <view class="about-header">
+          <view class="about-name">{{item.relaaseProjectTitle}}</view>
+          <view class="about-detail">
+            <image src='../../image/shouye/gengduo.png' class="icon"></image>
+            <view class="about-look">查看详情</view>
+          </view>
+        </view>
+        <image src="{{item.releaseProjectSwiper[0].releseProjectSwiperImg}}" class="img"></image>
+        <view class="about-footer">
+          <text>{{item.releaseProjectZhengWeng}}</text>
+        </view>
+    </view>
+ </block>   
+  </view>
+    

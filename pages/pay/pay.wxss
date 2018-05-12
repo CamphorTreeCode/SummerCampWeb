@@ -1,0 +1,23 @@
+/* pages/pay/pay.wxss */
+page{ background: #f2f2f2;}
+/*灰色栏属性*/
+.line{ height: 10rpx; background: #f2f2f2; }
+/*头部订单详情*/
+.headTitle{ height: 225rpx; padding:  24rpx 1rem; box-sizing: border-box; background: #fff;}
+.headTitle image{ width: 177rpx; height: 177rpx; float: left; border-radius: 10rpx; margin-right: 10rpx;}
+.headTitle .projectTitle{ height: 60rpx; line-height: 60rpx; color: #333; font-size: 1.1rem;}
+.headTitle .projectContent{ height: 100rpx; line-height: 50rpx; color: #999; display: -webkit-box;word-break: break-all;text-overflow: ellipsis;overflow: hidden;-webkit-box-orient: vertical;-webkit-line-clamp:2;}
+
+/*title样式*/
+.title{ height: 100rpx; padding: 0 1rem; line-height: 100rpx; color: #333; background: #fff;}
+.title image{ width: 40rpx; height: 40rpx; float: left; margin:33rpx 10rpx 0 0;}
+.title text{ float: right; color:#8A0000; }
+/*下边框*/
+.body{ border-bottom:1px solid #f2f2f2;}
+
+/*支付导航*/
+.pay{ padding:0; position: fixed; bottom: 0; width: 100%;}
+.pay .text{ float: left; margin-left: 1rem;}
+.pay .money{ float: left;}
+.pay view{ float: right; background-color:#8A0000; padding: 0 0 0 1.5rem; color: #fff;}
+.pay view image{ float: right; width: 40rpx; height: 40rpx; margin: 30rpx;}

@@ -1,0 +1,23 @@
+<!--pages/company/company.wxml-->
+<!--头部图片-->
+<image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/63dab523-01cc-4a1b-b57d-acaac8f8cdb9.jpg' class='headImg'></image>
+
+<!--清除浮动-->
+<view class='clear'></view>
+
+<!--灰色栏-->
+<view class='line'></view>
+<!--标题栏-->
+<view class='title'>
+   <image src='/image/company/gongsi.png '></image>
+成长赢地
+</view>
+<view class='line'></view>
+
+<view class='contentTitle'>
+   <image src='/image/company/xiangqing.png '></image>
+    详情
+</view>
+<view class='contentText'>
+    {{companyContent}}
+</view>

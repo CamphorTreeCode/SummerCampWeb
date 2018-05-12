@@ -1,0 +1,38 @@
+/* pages/notes/notes.wxss */
+page{ color: #333;}
+.header{
+  display: flex; 
+  flex-direction: column;
+  background: #f2f2f2;
+  color: #333;
+}
+.img{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 100%;
+  background: #fff;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.xy{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.cowboy{
+  height: 40rpx;
+  float: left;
+}
+.nav
+{
+  background: #fff;
+  padding: 40rpx;
+}
+.begin{
+  color: #810000;
+}
+.margin{
+  margin-bottom: 20rpx;
+  word-wrap:  break-word;
+}

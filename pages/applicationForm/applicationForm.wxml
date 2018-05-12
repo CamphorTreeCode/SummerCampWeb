@@ -1,0 +1,148 @@
+<!--pages/applicationForm/applicationForm.wxml-->
+<form bindsubmit='formSubmit'>
+<!--灰色栏-->
+<view class='line'></view>
+<!--标题栏-->
+<view class='title head'>
+   <image src='/image/applicationForm/baoming.png '></image>
+    牛仔训练营报名表
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='title'>
+   <image src='/image/applicationForm/xinxi.png  '></image>
+    营员基本信息
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<!--基本属性列-->
+<view class='formProperty body'>
+     <text>姓名：</text><input id="enlistName"  name="enlistName" type='text' value="{{enlist.enlistName}}" placeholder='请输入姓名'></input>
+</view>
+<view class='formProperty radio body'>
+     <text>性别：</text>
+     <!-- <input id="enlistSex" name="enlistSex" type='text' value="{{enlist.enlistSex}}" placeholder='请输入性别'></input> -->
+     <radio-group id="enlistSex" name="enlistSex" class="radio-group" bindchange="radioChange">
+     <radio  value="0" class=""  color=' #8A0000'  checked="{{enlist.enlistSex==0}}">男</radio>
+     <radio value="1"  class='true' color=' #8A0000' checked="{{enlist.enlistSex==1}}">女</radio>
+     </radio-group>
+</view>
+<view class='formProperty body'>
+     <text>年龄：</text><input id="enlistAge" name="enlistAge" type='text' value="{{enlist.enlistAge}}" placeholder='请输入年龄'></input>
+</view>
+<view class='formProperty body'>
+     <text>出生日期：</text><input id="enlistBirthDay" name="enlistBirthDay" type='text' value="{{enlist.enlistBirthDay}}" placeholder='请输入出生日期'></input>
+</view>
+<view class='formProperty body'>
+     <text>家庭地址:</text>
+</view>
+<view class='homeAdress'>
+     <textarea id="enlistAddres"  name="enlistAddres" maxlength='70' value="{{enlist.enlistAddres}}" placeholder='请输入家庭地址'></textarea>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<!--证件信息-->
+<view class='title IdCard' bindtap='IdCardType'>
+   <image src='/image/applicationForm/zhengjian.png '></image>
+    <text>证件信息</text>
+    <input id="enlistCard" name="enlistCard" type='hidden' disabled='true' value='{{IdCardType}}' focus="true"></input>
+    <image src='/image/applicationForm/xiala.png' class='foot'></image>
+</view>
+<view class='IdCardType' style='display:{{show}}'>
+  <view class='formProperty' bindtap='chooseIdCardType' data-value='身份证'>
+      身份证
+  </view>
+  <view class='formProperty' bindtap='chooseIdCardType' data-value='外国护照'>
+      外国护照
+  </view>
+  <view class='formProperty' bindtap='chooseIdCardType' data-value='中国护照'>
+      中国护照
+  </view>
+</view>
+<view class='formProperty'>
+     <input name="enlistCardNumber" id="enlistCardNumber" value="{{enlist.enlistCardNumber}}"></input>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<!--身体状况列-->
+<view class='title radio body'>
+   <image src='/image/applicationForm/jiankang.png '></image>
+    <text>身体是否健康</text>
+     <radio-group id="enlistHealthyIs" name="enlistHealthyIs" class="radio-group" style="float:right;" bindchange="radioChange">
+     <radio value="0"  checked="{{enlist.enlistHealthyIs==0}}" color=' #8A0000'>否</radio>
+     <radio value="1" class='true' checked="{{enlist.enlistHealthyIs==1}}" color=' #8A0000'>是</radio>
+     </radio-group>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='formProperty body unit'>
+    <text>身高：</text><input id="enlistHeight" name="enlistHeight" value="{{enlist.enlistHeight}}" type='text'></input><text class='foot'>cm</text>
+</view>
+<view class='formProperty body unit'>
+    <text>体重：</text><input id="enlistWeight" name="enlistWeight" type='text' value="{{enlist.enlistWeight}}"></input><text class='foot'>kg</text>
+</view>
+<view class='formProperty body'>
+     <text>鞋子尺码：</text><input id="enlistShoeSize" name="enlistShoeSize" type='text' value="{{enlist.enlistShoeSize}}"></input>
+</view>
+
+<view class='formProperty body radio'>
+     <text>是否是穆斯林</text>
+     <radio-group id="enlistMuslimIs" name="enlistMuslimIs" class="radio-group" bindchange="radioChange">
+     <radio  value="0"  color=' #8A0000'  checked="{{enlist.enlistMuslimIs==0}}">否</radio>
+     <radio value="1"  class='true' color=' #8A0000' checked="{{enlist.enlistMuslimIs==1}}">是</radio>
+     </radio-group>
+</view>
+
+<view class='formProperty body radio'>
+     <text>是否常晕车</text>
+     <radio-group id="enlistCarsicknessIs" name="enlistCarsicknessIs" class="radio-group" bindchange="radioChange">
+     <radio value="0"  color=' #8A0000' checked="{{enlist.enlistCarsicknessIs==0}}">否</radio>
+     <radio value="1"  class='true' checked="{{enlist.enlistCarsicknessIs==1}}" color=' #8A0000'>是</radio>
+     </radio-group>
+</view>
+
+<view class='formProperty body radio'>
+     <text>是否有药品过敏史</text>
+     <radio-group id="enlistAnaphylaxisIs" name="enlistAnaphylaxisIs" class="radio-group" bindchange="radioChange">
+     <radio value="0"  color='#8A0000' checked="{{enlist.enlistAnaphylaxisIs==0}}">否</radio>
+     <radio  value="1" class='true'  checked="{{enlist.enlistAnaphylaxisIs==1}}" color=' #8A0000'>是</radio>
+     </radio-group>
+</view> 
+<view class='formProperty body'>
+     <text>何种药品过敏:</text>
+</view>
+<view class='allergy'>
+     <textarea id="enlistAnaphylaxisText" name="enlistAnaphylaxisText" value='{{enlist.enlistAnaphylaxisText}}' maxlength='70' placeholder='请输入过敏药物'></textarea>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='title'>
+   <image src='/image/applicationForm/jiazhang.png'></image>
+    营员家长信息
+</view>
+<view class='formProperty'>
+     <text>父亲姓名：</text><input id="enlistFatherName" name="enlistFatherName" value="{{enlist.enlistFatherName}}" type='text' placeholder='请输入父亲姓名'></input>
+</view>
+<view class='formProperty'>
+     <text>手机：</text><input id="enlistFatherPhone" name="enlistFatherPhone" type='text' value="{{enlist.enlistFatherPhone}}" placeholder='请输入父亲手机号'></input>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='formProperty'>
+     <text>母亲姓名：</text><input id="enlistMotherName" name="enlistMotherName"  value="{{enlist.enlistMotherName}}" type='text' placeholder='请输入母亲姓名'></input>
+</view>
+<view class='formProperty'>
+     <text>手机：</text><input id="enlistMotherPhone" name="enlistMotherPhone" value="{{enlist.enlistMotherPhone}}" type='text' placeholder='请输入母亲手机号'></input>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='title'>
+   <image src='/image/applicationForm/aixin.png '></image>
+    家长期待（50字以内）:
+</view>
+<view class='personMessage'>
+    <textarea id="enlistHomeExpectText" value="{{enlist.enlistHomeExpectText}}" name="enlistHomeExpectText" maxlength='50'></textarea>
+</view>
+    <button class='submit' form-type='submit'>提交</button>
+</form>
+

@@ -1,0 +1,39 @@
+/* pages/applicationForm/applicationForm.wxss */
+/*灰色栏属性*/
+.line{ height: 10rpx; background: #f2f2f2; }
+/*头部标题特殊样式*/
+.head{ font-size: 1.1rem;}
+/*title样式*/
+.title{ height: 100rpx; padding: 0 1rem; line-height: 100rpx; color: #333;}
+.title image{ width: 40rpx; height: 40rpx; float: left; margin:33rpx 0.6rem 0 0;}
+
+/*表单属性*/
+.formProperty{ padding: 0 1rem; height: 100rpx; line-height:100rpx; color: #333; overflow: hidden;}
+.formProperty text{ float: left;}
+.formProperty input{ height: 100rpx;}
+/*家庭住址特殊样式*/
+.homeAdress{padding: 0 1rem 0.3rem; height: 200rpx; overflow: hidden;}
+.homeAdress textarea{ width: 100%; color: #333; height: 200rpx;}
+/*身份证特殊样式*/
+.IdCard{ border-bottom: 1rpx solid #f2f2f2;}
+.IdCard .foot{ float: right; height: 24rpx; margin:38rpx 0 0 0;}
+.IdCard text{ float: left;}
+.IdCard input{ float:left; height:100rpx; margin-left: 1rem; width: 50%;}
+/*身体状况特殊样式*/
+.radio{ overflow: hidden;}
+.radio radio{ float: right;}
+.radio radio.true{ margin-right: 1.8rem;}
+/*身高特殊样式*/
+.unit input{ float:  left; width: 50%;}
+.unit .foot{ float: right; color:#8A0000;}
+/*身体情况下边框*/
+.body{ border: 1px solid #f2f2f2;}
+/*过敏药物特殊样式*/
+.allergy{padding:1rem 1rem 0.3rem; height: 200rpx; overflow: hidden;}
+.allergy textarea{ width: 100%; color: #333; height: 200rpx;}
+/*家长意见输入框*/
+.personMessage{padding: 0 1rem 0.3rem; height: 200rpx; overflow: hidden;}
+.personMessage textarea{ width: 100%; color: #333;}
+
+/*提交按钮*/
+.submit{ width: 94%; background-color: #8A0000; color: #fff; margin: 16rem  auto 2rem;}

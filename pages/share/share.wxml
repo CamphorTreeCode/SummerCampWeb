@@ -1,0 +1,5 @@
+<!--pages/share/share.wxml-->
+<view class='text'>
+     <text>你聪明好学,诚实淳朴,优点很多,前途无量!希望你不要满足今天取得的成绩,通过自己脚踏实地的奋斗,把心中美好的蓝图变成现实,通过自己脚踏实地的奋斗,把心中美好的蓝图变成现实</text>
+     <view class='gohome' bindtap='gohome'></view>
+</view>

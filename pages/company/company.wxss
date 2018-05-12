@@ -1,0 +1,13 @@
+/* pages/company/company.wxss */
+.clear{ clear: both;}
+/*头部图片*/
+.headImg{ height: 340rpx; width: 100%; float: left;}
+/*灰色栏属性*/
+.line{ height: 10rpx; background: #f2f2f2; }
+/*title样式*/
+.title{ height: 100rpx; padding: 0 1rem; line-height: 100rpx; color: #333;}
+.title image{ width: 40rpx; height: 40rpx; float: left; margin:30rpx 0.6rem 0 0;}
+/*详情样式*/
+.contentTitle{ height: 80rpx; padding: 0 1rem; line-height: 80rpx; border-bottom: 1px solid #f2f2f2; color: #333;}
+.contentTitle image{ width: 40rpx; height: 40rpx; float: left; margin:20rpx 0.6rem 0 0;}
+.contentText{ padding: 1rem; line-height: 60rpx; color: #666;}

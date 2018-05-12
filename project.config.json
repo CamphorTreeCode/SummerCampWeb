@@ -1,0 +1,137 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.9",
+	"appid": "wx7264118368e9a2b4",
+	"projectname": "%E9%9B%B7%E8%92%99",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "公司简介",
+					"pathName": "pages/company/company",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "会员中心",
+					"pathName": "pages/center/center",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "留言",
+					"pathName": "pages/leaveMessage/leaveMessage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "申请表",
+					"pathName": "pages/applicationForm/applicationForm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付界面",
+					"pathName": "pages/pay/pay",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "支付完成",
+					"pathName": "pages/paySuccess/paySuccess",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "退营须知",
+					"pathName": "pages/notes/notes",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "入营协议",
+					"pathName": "pages/agreement/agreement",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "支付测试",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付",
+					"pathName": "pages/pay/pay",
+					"query": ""
+				},
+				{
+					"id": 14,
+					"name": "报名",
+					"pathName": "pages/applicationForm/applicationForm",
+					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "支付完成",
+					"pathName": "pages/applicationForm/formManagement",
+					"query": ""
+				}
+			]
+		}
+	}
+}

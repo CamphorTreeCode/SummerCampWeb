@@ -1,0 +1,49 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<!--头部logo-->
+<view class="top">
+  <image src='/image/paySuccess/gou.png'></image>
+  <view class='baoming'>报名成功</view>
+</view>
+<!--订单详细信息-->
+<view class='title body number'>交易编号：{{Order.orderNumber}}</view>
+<view class='title body'>
+<image src='/image/paySuccess/shijian.png'></image>
+报名时间
+<text class='time'>{{Order.orderPayCreatTime}}</text>
+</view>
+<view class='title body'>
+<image src='/image/paySuccess/qian2.png'></image>
+项目总价
+<text>￥{{Order.orderMoney}}</text>
+</view>
+<view class='title body'>
+<image src='/image/paySuccess/qian.png'></image>
+项目实付
+<text>￥{{Order.orderMoney}}</text>
+</view>
+<!--遮罩-->
+<view class='shade' style='display:{{showShade}}'>
+  
+</view>
+<!--家长寄语-->
+<view class='wishes' style='display:{{showWishes}}'>
+   <text>
+        你聪明好学,诚实淳朴,优点很多,前途无量!希望你不要满足今天取得的成绩,通过自己脚踏实地的奋斗,把心中美好的蓝图变成现实,通过自己脚踏实地的奋斗,把心中美好的蓝图变成现实
+   </text>
+   <button class='share' open-type='share'>立即分享寄语</button>
+</view>
+<view class='closeWishes' bindtap='closeWishes' style='display:{{showWishes}}'>
+   <image src='/image/paySuccess/cha@2x.png '></image>
+   <view class='shuxian'></view>
+</view>
+<!--获得会员-->
+ <view class='member' style='display:{{showMember}}'>
+     <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/32c43e11-5bc0-42f4-b8b6-62fbd8565462.png'  mode='aspectFill'></image>
+     <view>恭喜您获得雷蒙叔叔VIP卡</view>
+     <view>可在会员中心查看</view>
+</view>
+<view class='closeMember' bindtap='closeMember' style='display:{{showMember}}'>
+   <image src='/image/paySuccess/cha@2x.png'></image>
+</view>
+<loading style="display:{{loadingShow}}">页面3秒后跳转订单列表页</loading>
+

@@ -1,0 +1,47 @@
+/* pages/applicationForm/formManagement.wxss */
+page{
+  background: #F2F2F2
+}
+.formBody{
+
+}
+.formItem{
+  height: 200rpx;
+  margin-top:2%;
+  background: #fff;
+}
+.titleLeft{
+  height: 100%;
+  width: 40%;
+  padding-left: 40rpx;
+  
+}
+.formTitle{
+  line-height: 120rpx;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+
+}
+.formState{
+  color: #A54445;
+  line-height: 40rpx;
+}
+.titleRight{
+  width: 49%;
+  margin-right:40rpx;
+  text-align: right;
+}
+.updates{
+  line-height: 120rpx;
+  color: #A54445;
+}
+.payTime{
+ color: #969696; 
+ font-size: 0.75rem;
+ line-height: 40rpx;
+ overflow:hidden;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+
+}

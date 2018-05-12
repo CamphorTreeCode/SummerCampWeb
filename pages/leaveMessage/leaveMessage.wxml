@@ -1,0 +1,15 @@
+<!--pages/leaveMessage/leaveMessage.wxml-->
+<!--标题栏-->
+<form bindsubmit='formSubmit'>
+<view class='title'>
+   <image src='/image/leaveMessage/yijkian.png '></image>
+   给我们留言
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='inputContent'>
+     <textarea placeholder='请在此撰写您的留言,我们将会诚心采纳' name="leaveMessage" maxlength='420'></textarea>
+</view>
+
+<button class='submit' form-type='submit'>提交</button>
+</form>

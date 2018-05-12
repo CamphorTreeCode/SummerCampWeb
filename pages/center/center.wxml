@@ -1,0 +1,12 @@
+<!--pages/center/center.wxml-->
+<view class='card'>
+  <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/e94b225d-2b75-4fd5-9800-7025f5a811f1.png'></image>
+</view>
+<view class='crown'>
+  <image src='/image/center/VIP.png'></image>
+  <text>会员号</text>
+</view>
+<view class="number">
+  <text>{{vipNumber}}</text>
+  <view bindtap='copeTbl'>复制</view>
+</view>

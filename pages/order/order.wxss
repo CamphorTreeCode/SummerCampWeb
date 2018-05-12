@@ -1,0 +1,48 @@
+/* 顶部导航栏 */
+.navs {
+  display: flex;
+}
+.nav-item {
+  width: 33.3%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+.nav-item .nav-image {
+  padding-top: 20rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.nav-item text {
+  padding-top: 10rpx;
+  font-size: 30rpx;
+}
+/* 空隙 */
+.separate {
+  height: 10rpx;
+  background-color: #F2F2F2;
+}
+
+
+/*订单列表*/
+.orderList{ height: 225rpx; padding: 0 1rem; padding-top: 52rpx; box-sizing: border-box; font-size: 0.8rem;padding-top:42rpx;
+}
+.orderList image{ width: 121rpx; height: 120rpx; float: left; border-radius: 10rpx; margin-right: 10rpx; margin-top:2%;
+}
+.orderList view{ overflow: hidden; line-height: 50rpx; height: 50rpx;}
+.orderList view .project{ font-size: 1rem; color: #333;}
+.orderList view .left{ float: left;}
+.orderList view .right{ float: right }
+/*去支付特殊样式*/
+.orderList view.gopayview{ height: 70rpx; }
+.gopay{ border: 1px #942625 solid ; font-size: 1rem; color: #942625; padding:0 0.6rem; border-radius: 10rpx;}
+/*灰色样式*/
+.gray{ color: #999;}
+.bianhao{
+  /* width:68%; */
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+
+}

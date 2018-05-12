@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/order/order",
+    "pages/about/about",
+    "pages/logs/logs",
+    "pages/center/center",
+    "pages/company/company",
+    "pages/notes/notes",
+    "pages/agreement/agreement",
+    "pages/leaveMessage/leaveMessage",
+    "pages/applicationForm/applicationForm",
+    "pages/pay/pay",
+    "pages/paySuccess/paySuccess",
+    "pages/share/share",
+    "pages/test/test",
+    "pages/applicationForm/formManagement"
+
+
+
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "成长赢地",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "borderStyle": "#f2f2f2",
+    "backgroundColor": "#fff",
+    "color": "#cccccc",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/shouye/shouye (2).png",
+        "selectedIconPath": "image/shouye/shouye.png"
+
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "image/shouye/dingdan.png",
+        "selectedIconPath": "image/shouye/dingdan (2).png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "image/shouye/guanyu.png",
+        "selectedIconPath": "image/shouye/guanyu (2).png"
+      }
+    ]
+  }
+}

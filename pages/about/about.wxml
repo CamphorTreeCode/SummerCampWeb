@@ -1,0 +1,30 @@
+<image src='../../image/guanyu/gbanner.png' mode='aspectFill'></image>
+<view class="line"></view>
+<view class='group' bindtap='member'>
+  <image src='../../image/guanyu/bailing.png'></image>
+  <text>会员中心</text>
+  <view hidden="{{showNewsState?true:false}}" class="red-dot"></view>
+</view>
+<view  class="line"></view>
+  <!-- hidden="{{!svipStatus}}"  -->
+<view hidden="{{vipNumber!='添加失败'?false:true}}" class='group' bindtap='form'>
+  <image src='../../image/guanyu/baoming.png'></image>
+  <text>我的报名表</text>
+</view>
+<view class="line"></view>
+<view class='group'  bindtap='company'>
+  <image src='../../image/guanyu/yinghang.png'></image>
+  <text>公司简介</text>
+</view>
+<view class="line"></view>
+<view class='group' bindtap='contact'>
+  <image src='../../image/guanyu/kefu.png'></image>
+  <text>联系我们</text>
+</view>
+<view class="line"></view>
+<view class='group' bindtap='message'>
+  <image src='../../image/guanyu/xinxi.png'></image>
+  <text>留言</text>
+</view>
+<view class="line"></view>
+

@@ -1,0 +1,35 @@
+<!-- 顶部导航栏 -->
+  <scroll-view scroll-y style="height:{{orderList.length<4?(orderList.length*265+135):orderList.length*245+115}}rpx;" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+   
+<view class='navs'>
+  <block wx:for-items='{{navItems}}' wx:key='name'>
+    <view class='nav-item' catchtap='navigation' data-type='{{item.name}}' data-typeid='{{index}}' >
+      <image src='{{item.imageUrl}}' class='nav-image'></image>
+      <text style='color:{{item.textColor}}'>{{item.name}}</text>
+    </view>
+  </block>
+</view>
+<!-- 空隙-->
+<!-- 内容-->
+
+<block wx:for-items='{{orderList}}'>
+<view class="separate"></view>
+<view class='orderList'>
+     <image src='{{item.releaseProjectSwiper[0].releseProjectSwiperImg}}' mode='aspectFill'></image>
+     <view><text class='left project'>菲律宾潜能营</text><text class='right gray'>{{item.orderCreatTime}}</text></view>
+     <view style="display:{{item.orderState==0 ? 'none' : 'block'}}"><text class='left gray'>总价:￥{{item.orderMoney}}</text><text class='right gray' style='color:#942625'>{{item.orderState==2?'已报名':item.orderState==1?'已付款':''}}</text>   
+    </view>
+     <view style="left" style="display:{{item.orderState==0 ? 'none' : 'block'}}"><text class='left gray bianhao' >交易编号:￥{{item.orderNumber}}</text>    
+     </view> 
+     <i style="display:{{item.orderState>=1 ? 'none' : 'block'}}">
+     <view><text class='left gray'>总价:￥{{item.orderMoney}}</text><text class='right gray'>待付款</text></view>
+     <view class='gopayview'>
+    
+     <text class='right gopay' data-id="{{item.orderId}}" catchtap='gopay'>去付款</text></view>
+     </i>
+</view>
+
+<!-- 空隙   -->
+<view class="separate"></view>
+</block>
+</scroll-view>

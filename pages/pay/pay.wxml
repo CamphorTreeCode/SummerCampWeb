@@ -1,0 +1,40 @@
+<!--pages/pay/pay.wxml-->
+<!--灰色栏-->
+<view class='line'></view>
+<!--头部订单详情-->
+<view class='headTitle'>
+   <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/e4c4a539-de11-49ff-a281-a65a2261a080.jpg' mode='aspectFill'></image>
+   <view class='projectTitle'>{{releaseProject.relaaseProjectTitle}}</view>
+   <view class='projectContent'>{{releaseProject.releaseProjectZhengWeng}}</view>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+
+<view class='title body'>
+   <image src='/image/pay/yingfu.png  '></image>
+    商品总价
+    <text>￥{{orderMoney}}</text>
+</view>
+<view class='title body'>
+   <image src='/image/pay/shifu.png'></image>
+    商品实付
+    <text>￥{{orderMoney}}</text>
+</view>
+<!--灰色栏-->
+<view class='line'></view>
+<view class='title body'>
+   <image src='/image/pay/tishi.png '></image>
+    提示
+</view>
+<view class='title'>
+    支付成功后会发送会员码到会员中心
+</view>
+<!--付款列-->
+<view class='title pay'>
+   <text class='text'>付款</text>
+   <text class='money'>￥{{orderMoney}}</text>
+   <view bindtap="{{payments?'payment':''}}">
+      去支付
+<image src='/image/pay/qu.png'></image>   
+   </view>
+</view>

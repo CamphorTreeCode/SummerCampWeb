@@ -1,0 +1,26 @@
+<!--pages/notes/notes.wxml-->
+<view class='header'>
+     <!--img top begin-->
+   <view class='img'>
+        <image src='/pages/notes/img/xieyi.png' class='xy'></image>
+        <text class='cowboy'>夏令营退改营须知</text>
+   <!--img top end  -->
+   </view>
+   <view class='nav'>
+     <view class='one'>营员保留因自身原因或因对活动内容和形式不满而退营的权利，退营规则如下：</view>
+
+     <view class='text'>
+     <view class='margin'>
+       
+        <text>{{RetreatCamp}}</text>
+     </view>
+    
+        
+        
+     
+     </view>
+   </view>
+   
+
+
+</view>

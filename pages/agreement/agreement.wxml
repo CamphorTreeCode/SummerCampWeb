@@ -1,0 +1,47 @@
+<!--pages/agreement/agreement.wxml-->
+<!--header  begin-->
+<view class='header'>
+<!--img top begin-->
+   <view class='img'>
+        <image src='/pages/agreement/img/xieyi.png' class='xy'></image>
+        <text class='cowboy'>我是牛仔成长营地特训营监护人协议</text>
+   <!--img top end  -->
+   </view>
+<!--nav begin -->
+<view class='nav'>
+<!--one begin  -->
+   <view class='one'>
+       <view class='top'>说明</view> 
+      <text class='bottom'>本服务协议双方为我是牛仔成长营地特训营营员（营员姓名参见报名表）的监护人（以下简称“甲方”）与中联明途（北京）教育科技有限公司（以下称“乙方”），本服务协议具有合同效力。甲方在点击同意本协议之前，应当认真阅读本协议。当甲方阅读并同意本协议且完成全部报名流程后，即表示已充分阅读、理解并接受本协议的全部内容，并与乙方达成一致。
+      </text>
+      <!--one end -->
+   </view>
+
+    <view class='one'>
+      <text class='bottom'>甲、乙双方就甲方子女参加由乙方组织的我是牛仔成长营地特训营活动，自愿签订如下协议：</text>
+      <!--one end -->
+   </view>
+
+   <!--one begin  -->
+   <view class='one'>
+       
+      <text>{{operate}}
+      </text>
+      <!--one end -->
+   </view>
+
+   
+   <view class='border'></view>
+    
+    <view class='check'>
+    <checkbox-group bindchange="checkState">
+      <checkbox checked='{{checked}}' color='#810' class='checked' value="xz">我已阅读以上说明</checkbox>
+    </checkbox-group>
+    </view>
+    <button class='year' bindtap='submit'>提交</button>
+   <!--nav end  -->
+</view>
+
+<!--header  end-->
+</view>
+
