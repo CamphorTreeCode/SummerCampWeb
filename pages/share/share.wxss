@@ -1,4 +1,20 @@
 /* pages/share/share.wxss */
-page{ background: url('https://www.chuanshoucs.com/ServerImg/2018-04-18/5a69fa60-fbeb-47d4-8477-aaa0c3d91be7.png') no-repeat;background-size: 750rpx 1210rpx; background-color:#3fd4ff;}
-.text{ line-height: 86rpx; padding:150rpx 90rpx; color: #fff; width: 750rpx; height: 1200rpx; position: relative; box-sizing: border-box;}
-.gohome{width: 150rpx; height: 150rpx; border-radius: 150rpx;  position: absolute; left: 40%; bottom: 12%;}
+page{ background: url('https://www.chuanshoucs.com/ServerImg/2018-05-16/529bef6f-9428-41ae-890a-373f8c7b584c.png') no-repeat;background-size: 750rpx 1210rpx; background-color:#FFF695;
+}
+.text{
+line-height:77rpx;
+padding:227rpx 90rpx;
+color:#000;
+width:750rpx;
+height:1000rpx;
+position:relative;
+box-sizing:border-box;
+}
+.tex{
+position: absolute;
+width: 80%;
+}
+.text text{
+
+}
+.gohome{width: 150rpx; height: 150rpx; border-radius: 150rpx;  position: absolute; left: 40%; bottom: -11%;}

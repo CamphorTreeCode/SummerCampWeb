@@ -35,12 +35,41 @@ page{ background: #f2f2f2;}
 /*遮罩*/
 .shade{ width: 100%; height: 100%; position: fixed; background:#000; top: 0; left: 0; opacity:0.5;}
 /*家长寄语*/
-.wishes{ width: 579rpx; height: 871rpx; background-image: url('https://www.chuanshoucs.com/ServerImg/2018-04-18/e5d70c2d-bde7-49c1-a50d-27293c60935d.png'); background-size: 100% 100%; border-radius: 15rpx; margin:0 auto; z-index: 999; position:fixed; left: 11%; top: 17%; box-sizing: border-box; padding:3rpx 75rpx 0; line-height: 70rpx; color: #fff; font-size: 0.9rem;}
-.share{ height: 78rpx; line-height: 78rpx; width: 446rpx; text-align: center; position:absolute; bottom:11%; color:#009cff; border: none; left: 12%;}
+.wishes{
+width:579rpx;
+height:871rpx;
+background-image:url('https://www.chuanshoucs.com/ServerImg/2018-05-16/d84c1242-1b8d-46bc-9051-662e931ae3dc.png');
+background-size:100% 100%;
+border-radius:15rpx;
+margin:0 auto;
+z-index:999;
+position:fixed;
+left:11%;
+top:15%;
+box-sizing:border-box;
+padding:135rpx 75rpx 0;
+line-height:53rpx;
+color:#000;
+font-size:0.9rem;
+
+
+
+}
+.share{ height: 78rpx; line-height: 78rpx; width: 446rpx; text-align: center; position:absolute; bottom:11%; color:#fff; border: none; left: 12%;
+background-color:#B58F52;
+}
 /*家长寄语关闭按钮*/
-.closeWishes{ background-color: #f2f2f2; position: fixed; background: none; top: 12%; left: 82%;}
+.closeWishes{ 
+background-color:#f2f2f2;
+position:fixed;
+background:none;
+top:13%;
+left:82%;
+}
 .closeWishes image{ width: 50rpx; height: 50rpx;}
-.closeWishes .shuxian{ height:30rpx; width: 1px; background: #fff; margin: -8rpx auto;}
+.closeWishes .shuxian{ 
+  
+  }
 /*获得会员*/
 .member{ width: 476rpx; height: 476rpx; position: fixed; border-radius: 30rpx; left: 18%; top: 17%; text-align: center; color: #fff; line-height: 60rpx;}
 .member image{width: 476rpx; height: 476rpx;border-radius: 30rpx; margin-bottom: 10rpx;}

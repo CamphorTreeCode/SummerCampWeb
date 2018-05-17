@@ -31,19 +31,24 @@
      <text>年龄：</text><input id="enlistAge" name="enlistAge" type='text' value="{{enlist.enlistAge}}" placeholder='请输入年龄'></input>
 </view>
 <view class='formProperty body'>
-     <text>出生日期：</text><input id="enlistBirthDay" name="enlistBirthDay" type='text' value="{{enlist.enlistBirthDay}}" placeholder='请输入出生日期'></input>
+     <text>出生日期：</text>
+     <!-- <input id="enlistBirthDay" name="enlistBirthDay" type='text' value="{{enlist.enlistBirthDay}}" placeholder='请输入出生日期'></input> -->
+          <picker mode="date" value="{{date}}" start="1949-10-01" end="3000-10-01" bindchange="bindDateChange">
+     <input id="enlistBirthDay" class='picker' name="enlistBirthDay" type='text' placeholder='请输入出生日期' value='{{date}}'></input>
+     
+    </picker>
 </view>
 <view class='formProperty body'>
      <text>家庭地址:</text>
 </view>
 <view class='homeAdress'>
-     <textarea id="enlistAddres"  name="enlistAddres" maxlength='70' value="{{enlist.enlistAddres}}" placeholder='请输入家庭地址'></textarea>
+     <textarea id="enlistAddres"  name="enlistAddres" maxlength='70' value="{{enlist.enlistAddres}}" placeholder='请输入家庭地址' ></textarea>
 </view>
 <!--灰色栏-->
 <view class='line'></view>
 <!--证件信息-->
 <view class='title IdCard' bindtap='IdCardType'>
-   <image src='/image/applicationForm/zhengjian.png '></image>
+   <image src='/image/applicationForm/zhengjian.png'></image>
     <text>证件信息</text>
     <input id="enlistCard" name="enlistCard" type='hidden' disabled='true' value='{{IdCardType}}' focus="true"></input>
     <image src='/image/applicationForm/xiala.png' class='foot'></image>
@@ -60,7 +65,7 @@
   </view>
 </view>
 <view class='formProperty'>
-     <input name="enlistCardNumber" id="enlistCardNumber" value="{{enlist.enlistCardNumber}}"></input>
+     <input name="enlistCardNumber" id="enlistCardNumber" value="{{enlist.enlistCardNumber}}" placeholder='请输入证件信息'></input>
 </view>
 <!--灰色栏-->
 <view class='line'></view>
@@ -138,7 +143,7 @@
 <view class='line'></view>
 <view class='title'>
    <image src='/image/applicationForm/aixin.png '></image>
-    家长期待（50字以内）:
+     （50字以内）:
 </view>
 <view class='personMessage'>
     <textarea id="enlistHomeExpectText" value="{{enlist.enlistHomeExpectText}}" name="enlistHomeExpectText" maxlength='50'></textarea>

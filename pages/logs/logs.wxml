@@ -1,30 +1,30 @@
 <!--logs.wxml-->
 <import src="/wxParse/wxParse.wxml" />
 <view class="container log-list">
-  <swiper class="swiper" indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='rgb(0,0,0)' indicator-active-color='rgb(129,0,0)' circular='{{circular}}'>    
-      <block wx:for="{{movies}}">    
-        <swiper-item>    
-          <image src="{{item.releseProjectSwiperImg}}" class="slide-image" mode="aspectFill"/>    
-        </swiper-item>    
-      </block>    
-    </swiper>
-    
-    <!--nav begin -->
-    <view class='nav'>
-      <view class='price'>
-         <view class='top'>
-           <text class='philippines'>{{relaaseProjectTitle}}</text>    
-           <text class='money'>￥ {{relaaseProjectMoney}}</text>
-         </view>
-         <view class='bottom'>
-            <text class='introduce'>{{releaseProjectZhengWeng}}</text>
-         </view>
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='rgb(0,0,0)' indicator-active-color='rgb(129,0,0)' circular='{{circular}}'>
+    <block wx:for="{{movies}}">
+      <swiper-item>
+        <image src="{{item.releseProjectSwiperImg}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--nav begin -->
+  <view class='nav'>
+    <view class='price'>
+      <view class='top'>
+        <text class='philippines'>{{relaaseProjectTitle}}</text>
+        <text class='money' hidden='{{relaaseProjectMoney==0?true:false}}'>￥ {{relaaseProjectMoney}}</text>
       </view>
-      <!--user begin-->
-      <view class='user'>
+      <view class='bottom'>
+        <text class='introduce'>{{releaseProjectZhengWeng}}</text>
+      </view>
+    </view>
+    <!--user begin-->
+    <view class='user'>
       <!--first  begin-->
-        <view class='first'>
-          <!-- <image class='imgone' src='/pages/logs/pone/1.png'></image>
+      <view class='first'>
+        <!-- <image class='imgone' src='/pages/logs/pone/1.png'></image>
           <view class='center'><text class='textColor'>PADI潜水课程+团队心理辅导+自然教育</text></view>
           <view class='center'><text class='textColor'>唤醒沉睡的潜能</text></view>
           <view class='center twelve'>(12岁及以上)</view>
@@ -43,291 +43,26 @@
           <view class='center'>取得PADI开放水域潜水员证书后，即可以在世界</view>
           <view class='center'>任何地方参加PADI组织的潜水活动</view>
           <image class='banner2' src='https://www.chuanshoucs.com/ServerImg/2018-04-18/d1513fd6-ec6f-4abc-bcf1-170241439481.png'></image> -->
-       <template is="wxParse" data="{{wxParseData:article.nodes}}" />    
-        </view>
-        <!--second  begin-->
-        <view class='second'>
-           <view class='xc'>
-              <image class='xingcheng' src='/pages/logs/pone/xingcheng.png'></image>
-              <text class='yingqi'>营期行程</text>             
-           </view>
-        
-          <view>
-             <view class='round' wx:for="{{battalionEriod}}">
-                <view class='sun'>
-                <image src='/pages/logs/pone/day.png' class='day'></image>
-                <text class='daytext'>DAY{{index}}</text>
-                 </view>
-             <view class='time'>
-                <view>{{item.battalionEriodNoon!=null&&item.battalionEriodNoon!=''&&item.battalionEriodNight!=null&&item.battalionEriodNight!=''?'清晨：':'全天:'}}{{item.battalionEriodMorning}}</view>          
-                <view hidden="{{item.battalionEriodNoon==null||item.battalionEriodNoon==''?true:false}}">下午：{{item.battalionEriodNoon}}</view>          
-                <view hidden="{{item.battalionEriodNight==null||item.battalionEriodNight==''?true:false}}">晚上：{{item.battalionEriodNight}}</view>       
-             </view>
-
-           
-
-
-
-          </view>
-           
-           <!-- <image class='bannner3' src='https://www.chuanshoucs.com/ServerImg/2018-04-18/99a5a9f8-c91f-471d-b5ec-e9e97d4b7df5.png'></image> -->
-           </view>
-           
-        </view>
-
-
-        <!--third  begin-->
-        <view class='third'>
-        <!--middle  begin-->
-          <view class='middle'>
-          <!--trip  begin-->
-             <view class='trip'>
-              <image class='xinxi' src='/pages/logs/pone/xinxi.png'></image>
-              <text class='date'>营期信息</text>             
-          <!--trip  end-->
-           </view>
-           <!--middle  end-->
-          </view>
-          
-         
-         <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/dihzi.png' class='dizhi'></image>
-                <text class='jjdd'>集结地点</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-              {{releaseProjectHome}}
-              <!--word end-->
-              </text>
-              <image class="imglist"  mode="aspectFill" hidden="{{releaseProjectHomeUrl.length==0?true:false}}"  wx:for="{{releaseProjectHomeUrl}}" hidden="{{item==''||item==null?true:false}}" src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-
-          <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/huodong.png' class='dizhi'></image>
-                <text class='jjdd'>活动类型</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-              {{releaseProjectActivityType}}
-              <!--word end-->
-              </text>
-              <image class="imglist" mode="aspectFill" hidden="{{releaseProjectActivityUrl.length==0?true:false}}" wx:for="{{releaseProjectActivityUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-           <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/tiaojian.png' class='dizhi'></image>
-                <text class='jjdd'>报名条件</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-             {{releaseProjectConditions}}
-              <!--word end-->
-              </text>
-                          <image class="imglist" mode="aspectFill"  hidden="{{releaseProjectConditionsUrl.length==0?true:false}}" wx:for="{{releaseProjectConditionsUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-         
-
-          <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/renshu.png' class='dizhi'></image>
-                <text class='jjdd'>人员限制</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-              {{releaseProjectPersonnelRestrictions}}
-              <!--word end-->
-              </text>
-                                
-                          <image class="imglist" mode="aspectFill" hidden="{{releaseProjectPersonnelRestrictionsUrl.length==0?true:false}}" wx:for="{{releaseProjectPersonnelRestrictionsUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-        
-         <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/shijian.png' class='dizhi'></image>
-                <text class='jjdd'>营期时间</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-             {{releaseProjectBattalionTime}}
-              <!--word end-->
-              </text>
-       <image class="imglist" mode="aspectFill" hidden="{{releaseProjectBattalionTimeUrl.length==0?true:false}}" wx:for="{{releaseProjectBattalionTimeUrl}}" hidden="{{item==''||item==null?true:false}}"   src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-          <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/fei.png' class='dizhi'></image>
-                <text class='jjdd'>营期费用</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-            {{relaaseProjectMoney}}/人
-              <!--word end-->
-              </text>
-                                                                    <image class="imglist" mode="aspectFill" hidden="{{releaseProjectBattalionMoneyUrl.length==0?true:false}}"  wx:for="{{releaseProjectBattalionMoneyUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-          
-       
-        <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/baohan.png' class='dizhi'></image>
-                <text class='jjdd'>费用包含</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-             活动全程食宿、到达塔比拉兰后当地交通、医疗保障及后勤装备保障费、领队及教官费、景点门票及导游费、小费、保险费、潜水装备租赁费、PADI OW证书费、营服费、儿童菲律宾入境费；
-              <!--word end-->
-              </text>
-                   <image class="imglist" mode="aspectFill" hidden="{{releaseProjectCostincludesUrl.length==0?true:false}}"  wx:for="{{releaseProjectCostincludesUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-
-
-           <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/buhan.png' class='dizhi'></image>
-                <text class='jjdd'>费用不含</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-             除活动外的其余个人消费;学员所在地往返塔比拉兰集结地的路费；签证费及无成人陪伴委托证明文件费个人潜水服费(我们提供公用潜水服，但建议个人携带自用潜水服）
-              <!--word end-->
-              </text>
-              <image class="imglist" mode="aspectFill" hidden="{{releaseProjectNoCostincludesUrl.length==0?true:false}}"  wx:for="{{releaseProjectNoCostincludesUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-         
-
-          <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/gongyong.png' class='dizhi'></image>
-                <text class='jjdd'>公用装备</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-             {{releaseProjectPublicEquipment}}
-              <!--word end-->
-              </text>
-                            <image class="imglist" mode="aspectFill" hidden="{{releaseProjectPublicEquipmentUrl.length==0?true:false}}"  wx:for="{{releaseProjectPublicEquipmentUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-           <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'> 
-                <image src='/pages/logs/pone/zhi.png' class='dizhi'></image>
-                <text class='jjdd'>自备装备</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-            {{releaseProjectMyEquipment}}
-              <!--word end-->
-              
-              </text>
-            <image class="imglist" mode="aspectFill"  hidden="{{releaseProjectMyEquipmentUrl.length==0?true:false}}"  wx:for="{{releaseProjectMyEquipmentUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-
-
-           <!--place  begin-->
-          <view class='place'>
-              <!--aggregation  begin -->
-              <view class='aggregation'>
-                <image src='/pages/logs/pone/w.png' class='dizhi'></image>
-                <text class='jjdd'>注意事项</text>
-              <!--aggregation  end-->
-              </view>
-              <!--word  begin-->
-              <text class='word'>
-               {{releaseProjectAttention}}
-              <!--word end-->
-              </text>
-              
-                                          <image class="imglist" mode="aspectFill" hidden="{{releaseProjectAttentionUrl.length==0?true:false}}"  wx:for="{{releaseProjectAttentionUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-       <!--place end -->
-          </view>
-      
-      
-
-        <!--third  end-->
-        </view>
- 
-        <!--fourth  begin-->
-        <view class='fourth'>
-        <!--john  begin-->
-           <view class='johns'>
-             <image class='john' src='/pages/logs/pone/laoshi.png'></image>
-             <!--johns  end-->
-           </view>
-
-            <view class='teacher'>我是成长导师John</view>
-
-           <text class='train'>
-           {{releaseProjectIntroduce}}
-           </text>
-             <image class="imglist" mode="aspectFill" hidden="{{releaseProjectIntroduceUrl.length==0?true:false}}"  wx:for="{{releaseProjectIntroduceUrl}}" hidden="{{item==''||item==null?true:false}}"  src="{{item}}"></image>
-         
-           <!--fourth  end-->
-        </view>
-        
-
-         <!--sixth  begin-->
-        <view class='sixth'  bindtap='bind'>
-          <view class='float'>
-            <image class='nia' src='/pages/logs/pone/tishi.png'></image>
-            <text class='cowboy'>退营须知</text>
-          </view>
-          <image class='arrow' src='/pages/logs/pone/xiala.png'></image>
-        <!--sixth  end-->
-        </view>
-        <view class='button' bindtap='ggong'>
-          <button class='btn'>我要报名</button>
-        </view>
-      <!--user  end-->
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
       </view>
 
-       <!--nav end-->
-     </view>   
-       <!-- container end -->
+
+      <!--sixth  begin-->
+      <view class='sixth' bindtap='bind'>
+        <view class='float'>
+          <image class='nia' src='/pages/logs/pone/tishi.png'></image>
+          <text class='cowboy'>退营须知</text>
+        </view>
+        <image class='arrow' src='/pages/logs/pone/xiala.png'></image>
+        <!--sixth  end-->
+      </view>
+      <view class='button' bindtap='ggong'>
+        <button class='btn'>我要报名</button>
+      </view>
+      <!--user  end-->
+    </view>
+
+    <!--nav end-->
+  </view>
+  <!-- container end -->
 </view>

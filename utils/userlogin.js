@@ -14,6 +14,7 @@ function login(that){
           // user.city = userInfo.city
           // user.country = userInfo.country
           // user.language = userInfo.language       
+           getOpenid()
           var openid = wx.getStorageSync('openid')
           userInfo.openId = openid
           
@@ -54,7 +55,7 @@ function getOpenid() {
             header: {
               // 'content-type': 'application/x-www-form-urlencoded' // 默认值
               'content-type': 'application/json', // 默认值
-
+              xcxuser_name: "xcxuser_name"
             },
             success: function (res) {
               console.log(res)

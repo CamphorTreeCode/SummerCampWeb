@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.9",
+	"libVersion": "2.0.0",
 	"appid": "wx7264118368e9a2b4",
 	"projectname": "%E9%9B%B7%E8%92%99",
 	"isGameTourist": false,
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 16,
 			"list": [
 				{
 					"id": 0,
@@ -129,6 +129,12 @@
 					"id": 15,
 					"name": "支付完成",
 					"pathName": "pages/applicationForm/formManagement",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/share/share",
 					"query": ""
 				}
 			]

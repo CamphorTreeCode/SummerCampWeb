@@ -9,7 +9,9 @@ Page({
     showShade:'block',
     showWishes:'block',
     showMember:'none',
-    loadingShow:'none'
+    loadingShow:'none',
+    vipNumber:'',
+    enlistHomeExpectText:''
   },
 
   /**
@@ -18,14 +20,20 @@ Page({
   onLoad: function (options) {
     console.log(options)
     var orderId = options.orderId;
+    var enlistHomeExpectText = options.enlistHomeExpectText
+  
     var that = this
+    that.setData({
+      enlistHomeExpectText: enlistHomeExpectText
+    })
+    
+    var OpenId = app.returnOpenId()
     if (orderId==null){
-      var OpenId = app.returnOpenId()
       wx.request({
         url: app.globalData.url + 'wxOrder/selectOrderOpenIds?openId=' + OpenId,
         header: {
           // 'content-type': 'application/x-www-form-urlencoded' // 默认值
-          'content-type': 'application/x-www-form-urlencoded', // 默认值
+         'content-type': 'application/x-www-form-urlencoded', // 默认值
           xcxuser_name: "xcxuser_name"
         },
         success: function (res) {
@@ -53,6 +61,21 @@ Page({
         }
       }) 
     }
+    // //显示获取vip卡
+    // wx.request({
+    //   url: app.globalData.url + '/wxSvip/getsvipnumber?openId=' + OpenId,
+    //   header: {
+    //     // 'content-type': 'application/x-www-form-urlencoded' // 默认值
+    //     'content-type': 'application/x-www-form-urlencoded', // 默认值
+    //     xcxuser_name: "xcxuser_name"
+    //   },
+    //   success: function (res) {
+    //     console.info(res.data)
+    //     that.setData({
+    //       vipNumber: res.data == "添加失败" ? '' : res.data
+    //     })
+    //   }
+    // })
 
   },
 
@@ -67,7 +90,32 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this
+    var openId = wx.getStorageSync('openid')
+    if (openId) {
+      console.log("有openid")
+    } else {
+      console.log("沒有openid")
+      app.getOpenId();
+      openId = wx.getStorageSync('openid')
+    }
+    wx.request({
+      url: app.globalData.url + 'wxOrder/selectOrderOne?openId=' + openId,
+      header: {
+        // 'content-type': 'application/x-www-form-urlencoded' // 默认值
+        'content-type': 'application/x-www-form-urlencoded', // 默认值
+        xcxuser_name: "xcxuser_name"
+      },
+      success: function (res) {
+        console.info(res.data)
+        that.setData({
+          huiyuan: res.data,
+
+        })
+        
+
+      }
+    }) 
   },
 
   /**
@@ -107,8 +155,8 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '家长寄语',
-      path: '/pages/share/share',
+      title: '想对你说',
+      path: '/pages/share/share?enlistHomeExpectText=' + this.data.enlistHomeExpectText,
       success: function (res) {
         // 转发成功
         console.info('成功')
@@ -120,11 +168,22 @@ Page({
     }
   },
   closeWishes:function(){
+    var showMember = this.data.huiyuan[0] == 1 ? 'block' : 'none'
     this.setData({
-      showWishes:'none',
-      showMember:'block'
-
+      showWishes:'none', 
+      showMember: showMember
     })
+    if (showMember == "none"){
+      this.setData({
+        showWishes: 'none',
+        showShade: 'none',
+      })
+      setTimeout(function () {
+        wx.switchTab({
+          url: '/pages/order/order',
+        })
+      }, 1000)
+    }
 
   },
   closeMember:function(){
@@ -133,11 +192,11 @@ Page({
       showShade: 'none',
      
     })
-    setTimeout(function(){
-      wx.reLaunch({
+    setTimeout(function () {
+      wx.switchTab({
         url: '/pages/order/order',
       })
-    },4000)
+    }, 1000)
 
   }
 })

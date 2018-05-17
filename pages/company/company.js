@@ -23,10 +23,13 @@ Page({
         xcxuser_name: "xcxuser_name"
       },
       success:function(res){
+        console.log(res)
         console.info(res.data[0].companyDetailsContent)
         pg.setData({
 
-          companyContent: res.data[0].companyDetailsContent
+          companyContent: res.data[0].companyDetailsContent,
+          companyDetailsId: res.data[0].companyDetailsId,
+          companyDetailsCreatTime: res.data[0].companyDetailsCreatTime
         })
       }
     })

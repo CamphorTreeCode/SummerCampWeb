@@ -15,11 +15,11 @@
 <block wx:for-items='{{orderList}}'>
 <view class="separate"></view>
 <view class='orderList'>
-     <image src='{{item.releaseProjectSwiper[0].releseProjectSwiperImg}}' mode='aspectFill'></image>
-     <view><text class='left project'>菲律宾潜能营</text><text class='right gray'>{{item.orderCreatTime}}</text></view>
+     <image src='{{item.releaseProject[0].releaseProjectSwiper[0].releseProjectSwiperImg}}' mode='aspectFill'></image>
+     <view><text class='left project'>{{item.releaseProject[0].relaaseProjectTitle}}</text><text class='right gray'>{{item.orderCreatTime}}</text></view>
      <view style="display:{{item.orderState==0 ? 'none' : 'block'}}"><text class='left gray'>总价:￥{{item.orderMoney}}</text><text class='right gray' style='color:#942625'>{{item.orderState==2?'已报名':item.orderState==1?'已付款':''}}</text>   
     </view>
-     <view style="left" style="display:{{item.orderState==0 ? 'none' : 'block'}}"><text class='left gray bianhao' >交易编号:￥{{item.orderNumber}}</text>    
+     <view style="left" style="display:{{item.orderState==0 ? 'none' : 'block'}}"><text class='left gray bianhao' >交易编号:{{item.orderNumber}}</text>    
      </view> 
      <i style="display:{{item.orderState>=1 ? 'none' : 'block'}}">
      <view><text class='left gray'>总价:￥{{item.orderMoney}}</text><text class='right gray'>待付款</text></view>

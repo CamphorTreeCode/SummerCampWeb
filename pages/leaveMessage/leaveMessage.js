@@ -65,6 +65,7 @@ Page({
   
   },
   formSubmit:function(e){
+
     /*表单验证 */
     if (e.detail.value.leaveMessage==''){
       wx.showModal({
@@ -76,38 +77,55 @@ Page({
           } else {
             console.log('用户点击取消')
           }
-        }
-      })
-      return false;
-    }
-    wx.getUserInfo({
-      success: function (res) {
-    var OpenId = app.returnOpenId()  
-      console.info(e.detail.value.leaveMessage)
-      wx.request({
-        url: app.globalData.url +'/wxMessage/addMessage',
-        header: {
-          // 'content-type': 'application/x-www-form-urlencoded' // 默认值
-          'content-type': 'application/x-www-form-urlencoded', // 默认值
-           xcxuser_name: "xcxuser_name"
-        },
-        data: {
-           messageConent: e.detail.value.leaveMessage,
-           openId: OpenId,
-           messageName: res.userInfo.nickName
-              },
-        success:function(res){
-              console.info(res)
-              wx.showToast({
-                title: '留言成功!',
-                icon: 'success',
-                duration: 2000
-              })
+   
         }
         
       })
-  }
-})
+   
+    }else{
+      console.log(e)
+      wx.getUserInfo({
+        success: function (res) {
+          console.log(res)
+          var OpenId = app.returnOpenId()
+          console.log(OpenId)
+          console.info(e.detail.value.leaveMessage)
+          wx.request({
+            url: app.globalData.url + '/wxMessage/addMessage',
+            header: {
+              // 'content-type': 'application/x-www-form-urlencoded' // 默认值
+              'content-type': 'application/x-www-form-urlencoded', // 默认值
+              xcxuser_name: "xcxuser_name"
+            },
+            data: {
+              messageConent: e.detail.value.leaveMessage,
+              openId: OpenId,
+              messageName: res.userInfo.nickName
+            },
+            success: function (res) {
+              console.info(res)
+          
+         
+                wx.showToast({
+                  title: '留言成功!',
+                  icon: 'success',
+                  duration: 2000
+                })
+              
+              setTimeout(function () {
+                wx.reLaunch({
+                  url: '/pages/about/about',
+                })
+              }, 2500)
+
+              
+            }
+
+          })
+        }
+      })
+    }
+    
   }
 
 })

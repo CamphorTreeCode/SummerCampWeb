@@ -6,8 +6,8 @@ page{
 
 }
 .formItem{
-  height: 200rpx;
-  margin-top:2%;
+  height: 90px;
+  margin-top:8px;
   background: #fff;
 }
 .titleLeft{

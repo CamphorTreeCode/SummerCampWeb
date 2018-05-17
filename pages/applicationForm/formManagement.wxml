@@ -1,5 +1,6 @@
 <!--pages/applicationForm/formManagement.wxml-->
 <view class="formBody">
+  <scroll-view scroll-y style="height:{{enlistList.length<5?(enlistList.length*90+enlistList.length*8):enlistList.length*90+enlistList.length*8}}px;" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{s}}">
   <view class="formItem" wx:for="{{enlistList}}" >
   <view class="titleLeft lf">
     <view class="formTitle">{{item.order.releaseProject[0].relaaseProjectTitle}}</view>
@@ -10,4 +11,5 @@
     <view class="payTime">付款时间 {{item.order.orderPayCreatTime}}</view>
 </view>
 </view>
+</scroll-view>
 </view>

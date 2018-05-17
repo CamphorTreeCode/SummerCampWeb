@@ -19,8 +19,6 @@
 }
 .price{
   background: #FFF;
-  height: 200rpx;
-
   margin-bottom: 10rpx;
 }
 .top{
@@ -43,7 +41,6 @@
 .bottom{
   color: #999;
   margin: 20rpx;
-  height: 60rpx;
   line-height: 60rpx;
 }
 .user .center{ 
@@ -63,10 +60,11 @@
   padding-top: 80rpx;
 }
 .first{
-  width: 100%;
+  width: 94%;
   height: 100%;
   background: #fff;
   margin-bottom: 10rpx;
+  margin: 0 auto;
 }
 .textColor{
   color: #810000;
@@ -268,4 +266,9 @@ margin-top:50rpx;
  .round{
   width:92%;
   margin:0 auto;
+ }
+ .user{
+
+background:#fff;
+
  }

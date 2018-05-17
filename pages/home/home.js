@@ -1,5 +1,7 @@
 // pages/home/home.js
 var app = getApp()
+var check = require('../../utils/authorizationCheck.js');
+var userLogin = require('../../utils/userlogin.js');
 Page({
 
   /**
@@ -14,6 +16,7 @@ Page({
     /*轮播图数据 */
     imgUrls: [],
     /*项目列表数据*/
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     projectList:[
       {
         title:'菲律宾潜能营',
@@ -31,7 +34,9 @@ Page({
         content: '酒店开了房间打扫；发进口量的书法家；劳动纠纷；拉法基阿三的书法家；啊'
       }
     ],
-    Selected:[]
+    Selected:[],
+    showSQ:false,
+    noneShowButton:true
   },
   
   /**
@@ -39,8 +44,20 @@ Page({
    */
   onLoad: function (options) {
     /*请求后台拿到全部轮播图绑定轮播图id */
-    var pg=this
+  //权限验证
     var that = this
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res.errMsg)
+        if (res.errMsg =="getUserInfo:ok"){
+          that.setData({
+              showSQ:true
+            })
+        }
+      }})
+  //权限验证
+    var pg=this
+
     console.log(app.globalData.url)
     wx.request({
       url: app.globalData.url +'admin/swiper/weixinselectAll',
@@ -79,7 +96,18 @@ Page({
       }
     })  
   },
+  bindGetUserInfo: function (e) {
 
+    userLogin.login();
+    console.log(e)
+    var that = this
+    if (e.detail.errMsg =="getUserInfo:ok"){
+      that.setData({
+        showSQ:true,
+        noneShowButton:false
+      })  
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

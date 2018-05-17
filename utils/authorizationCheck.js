@@ -20,7 +20,7 @@ function getLoginCheck(that) {
  
     if (res.code) {
       getUserInfo({
-        withCredentials: true,
+        withCredentials: false,
       }).then(function (res) {
         console.info("1成功获取用户返回数据");
         console.info(res.userInfo);
@@ -35,7 +35,7 @@ function getLoginCheck(that) {
           content: '需要获取您的"用户信息"授权才能正常使用',
         }).then(function (res) {
           if (res.confirm) {
-            console.log('用户点击确定')
+            console.log('用户点击确定1')
             openSetting({}).then(function (res) {
               if (data) {
                 if (data.authSetting["scope.userInfo"] == true) {

@@ -1,5 +1,5 @@
 // pages/applicationForm/applicationForm.js
- function yanzhen(enlist){
+ function yanzhen(enlist,that){
    if (enlist.enlistName == ''){
      wx.showToast({
        title: '请填写姓名',
@@ -40,7 +40,7 @@
      })
      return false;
    }
-   if (enlist.enlistCard == '') {
+   if (that.data.IdCardType == '') {
      wx.showToast({
        title: '请选择证件类型',
        icon: 'none',
@@ -113,7 +113,7 @@ if (enlist.enlistMuslimIs == '') {
     })
     return false;
   }
-  if (enlist.enlistAnaphylaxisText == '') {
+  if (enlist.enlistAnaphylaxisIs==1&&enlist.enlistAnaphylaxisText == '') {
     wx.showToast({
       title: '请填写药品过敏史',
       icon: 'none',
@@ -155,12 +155,13 @@ if (enlist.enlistMuslimIs == '') {
   }
   if (enlist.enlistHomeExpectText == '') {
     wx.showToast({
-      title: '请填写家长的期待',
+      title: '请填写家长期待',
       icon: 'none',
       duration: 2000
     })
     return false;
   }
+  return true;
 }
 var app = getApp()
 Page({
@@ -170,10 +171,15 @@ Page({
    */
   data: {
     show:'none',
-    IdCardType:'',
-
+    IdCardType:0,
+    date: ''
   },
-
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -200,7 +206,8 @@ Page({
     that.setData({
       enlist:res.data[0],
       IdCardType: res.data[0].enlistCard == 0 ? '身份证' : res.data[0].enlistCard == 1?'中国护照':'外国护照',
-      orderState: res.data[0].orderState
+      orderState: res.data[0].orderState,
+      date: res.data[0].enlistBirthDay
       })
       console.log(res)
     }
@@ -287,8 +294,11 @@ e.detail.value.enlistCard = e.detail.value.enlistCard == "身份证" ? 0 : e.det
     app.getOpenId();
     openid = wx.getStorageSync('openid')
   }
-  var flag = yanzhen(enlist)
-  if (!flag){
+  var flag = yanzhen(enlist,that)
+  if (flag){
+
+  }else{
+    console.log(flag)
     return;
   }
   enlist.openId = openid
@@ -316,7 +326,7 @@ e.detail.value.enlistCard = e.detail.value.enlistCard == "身份证" ? 0 : e.det
               duration: 2000
             })
             wx.navigateTo({
-              url: '/pages/paySuccess/paySuccess?orderId=' + that.data.orderId,
+              url: '/pages/paySuccess/paySuccess?orderId=' + that.data.orderId + "&enlistHomeExpectText=" + enlist.enlistHomeExpectText,
             })
        
           } else if (that.data.orderState==0){
