@@ -37,7 +37,7 @@
    <button class='share' open-type='share'>立即分享寄语</button>
 </view>
 <view class='closeWishes' bindtap='closeWishes' style='display:{{showWishes}}'>
-   <image src='/image/paySuccess/cha@2x.png '></image>
+   <image src='/image/paySuccess/cha@2x.png'></image>
    <view class='shuxian'></view>
 </view>
 <!--获得会员hidden="{{huiyuan==1?false:true}}"-->

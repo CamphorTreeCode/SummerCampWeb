@@ -8,10 +8,6 @@
 <view wx:else>请升级微信版本</view>
 </view>
 </view> -->
-<!--遮罩-->
-<my-component>
-</my-component>
-<!--遮罩-->
 
   <view class="container">
      <swiper indicator-dots="{{indicatorDots}}"
@@ -45,3 +41,7 @@
  </block>   
   </view>
     
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->

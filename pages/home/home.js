@@ -146,5 +146,11 @@ var that = this
   onShareAppMessage: function () {
   
   },
-
+  locatingProject: function (e) {
+    console.info(e)
+    var releaseProjectId = e.currentTarget.dataset.releaseprojectid
+    wx.navigateTo({
+      url: '/pages/logs/logs?releaseProjectId=' + releaseProjectId
+    })
+  }
 })
