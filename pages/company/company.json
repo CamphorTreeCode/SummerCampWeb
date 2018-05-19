@@ -1,3 +1,5 @@
-{
+{"usingComponents": {
+    "my-component": "/utils/getUserTemplate/getUserTemplate"
+  },
   "navigationBarTitleText": "关于我们"
 }

@@ -1,5 +1,9 @@
 <!--pages/paySuccess/paySuccess.wxml-->
 <!--头部logo-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class="top">
   <image src='/image/paySuccess/gou.png'></image>
   <view class='baoming'>报名成功</view>

@@ -1,4 +1,8 @@
 <!--pages/applicationForm/formManagement.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class="formBody">
   <scroll-view scroll-y style="height:{{enlistList.length<5?(enlistList.length*90+enlistList.length*8):enlistList.length*90+enlistList.length*8}}px;" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{s}}">
   <view class="formItem" wx:for="{{enlistList}}" >

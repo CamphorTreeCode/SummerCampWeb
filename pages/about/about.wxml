@@ -1,3 +1,7 @@
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <image src='../../image/guanyu/gbanner.png' mode='aspectFill'></image>
 <view class="line"></view>
 <view class='group' bindtap='member'>
@@ -27,4 +31,15 @@
   <text>留言</text>
 </view>
 <view class="line"></view>
+
+
+  <view class="guanggao">
+   <view class="gglogo lf">
+   <image src="/image/company/cslogo.png"></image>
+   </view>
+   <view class="companyWZ lf">
+    传手小程序开发中心提供技术支持
+   </view>
+ </view>
+ <view class="ggphone cl">021-57630970</view>
 

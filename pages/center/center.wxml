@@ -1,4 +1,8 @@
 <!--pages/center/center.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class='card'>
   <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/e94b225d-2b75-4fd5-9800-7025f5a811f1.png'></image>
 </view>

@@ -1,3 +1,8 @@
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
+
 <!-- 顶部导航栏 -->
   <scroll-view scroll-y style="height:{{orderList.length<4?(orderList.length*265+135):orderList.length*245+115}}rpx;" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
    

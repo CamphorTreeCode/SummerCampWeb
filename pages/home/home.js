@@ -16,7 +16,7 @@ Page({
     /*轮播图数据 */
     imgUrls: [],
     /*项目列表数据*/
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
     projectList:[
       {
         title:'菲律宾潜能营',
@@ -35,8 +35,7 @@ Page({
       }
     ],
     Selected:[],
-    showSQ:false,
-    noneShowButton:true
+
   },
   
   /**
@@ -44,20 +43,9 @@ Page({
    */
   onLoad: function (options) {
     /*请求后台拿到全部轮播图绑定轮播图id */
-  //权限验证
-    var that = this
-    wx.getUserInfo({
-      success: function (res) {
-        console.log(res.errMsg)
-        if (res.errMsg =="getUserInfo:ok"){
-          that.setData({
-              showSQ:true
-            })
-        }
-      }})
-  //权限验证
-    var pg=this
 
+    var pg=this
+var that = this
     console.log(app.globalData.url)
     wx.request({
       url: app.globalData.url +'admin/swiper/weixinselectAll',
@@ -98,14 +86,15 @@ Page({
   },
   bindGetUserInfo: function (e) {
 
-    userLogin.login();
+   
     console.log(e)
     var that = this
     if (e.detail.errMsg =="getUserInfo:ok"){
       that.setData({
         showSQ:true,
         noneShowButton:false
-      })  
+      }) 
+      userLogin.login(); 
     }
   },
   /**
@@ -157,11 +146,5 @@ Page({
   onShareAppMessage: function () {
   
   },
-  locatingProject: function (e) {
-    console.info(e)
-    var releaseProjectId = e.currentTarget.dataset.releaseprojectid
-    wx.navigateTo({
-      url: '/pages/logs/logs?releaseProjectId=' + releaseProjectId
-    })
-  }
+
 })

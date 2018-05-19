@@ -92,7 +92,7 @@ Page({
       header: {
         // 'content-type': 'application/x-www-form-urlencoded' // 默认值
         'content-type': 'application/x-www-form-urlencoded', // 默认值
-        xcxuser_name: "xcxuser_name"
+         xcxuser_name: "xcxuser_name"
       },
       success: function (res) {
         console.info(res.data)

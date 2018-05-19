@@ -81,8 +81,8 @@ App({
   globalData: {
    
   userInfo: null,
-url:"https://www.chuanshoucs.com/SummerCamp/",
- // url: "http://localhost/SummerCamp/",
-  appUrl: "https://www.chuanshoucs.com/SummerCamp/",     
+    url:"https://www.pacata.xyz/SummerCamp/",
+   // url: "http://localhost/SummerCamp/",
+   appUrl: "https://www.pacata.xyz/SummerCamp/",     
   }
 })

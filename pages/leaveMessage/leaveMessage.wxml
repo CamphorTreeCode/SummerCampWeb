@@ -1,4 +1,8 @@
 <!--pages/leaveMessage/leaveMessage.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <!--标题栏-->
 <form bindsubmit='formSubmit'>
 <view class='title'>

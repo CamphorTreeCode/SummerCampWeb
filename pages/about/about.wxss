@@ -36,3 +36,35 @@ image {
   border-radius: 50%;
   background-color: red; 
 }
+/*广告*/
+.guanggao{
+margin:0 auto;
+height:30rpx;
+width:58%;
+margin-top:22%;
+
+}
+.gglogo{
+height:30rpx;
+border:1x solid red;
+
+}
+.gglogo image {
+height:96%;
+width:12px;
+margin-bottom:58%;
+
+
+}
+ .companyWZ{
+  font-size: 0.69rem;
+  color:#D1D1D1;
+  margin-left:1%;
+
+}
+.ggphone{
+  font-size:  0.69rem;
+  color:#D1D1D1;
+    margin:0 auto;
+    width: 30%;
+}

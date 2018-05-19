@@ -1,4 +1,8 @@
 <!--pages/notes/notes.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class='header'>
      <!--img top begin-->
    <view class='img'>

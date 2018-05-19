@@ -1,5 +1,9 @@
 <!--pages/company/company.wxml-->
 <!--头部图片-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/63dab523-01cc-4a1b-b57d-acaac8f8cdb9.jpg' class='headImg'></image>
 
 <!--清除浮动-->

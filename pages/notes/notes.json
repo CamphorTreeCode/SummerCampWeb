@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "my-component": "/utils/getUserTemplate/getUserTemplate"
+  },
   "navigationBarTitleText": "须知",
   "navigationBarBackgroundColor": "#000",
   "navigationBarTextStyle": "#fff"

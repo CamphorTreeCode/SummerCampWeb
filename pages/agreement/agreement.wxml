@@ -1,4 +1,8 @@
 <!--pages/agreement/agreement.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <!--header  begin-->
 <view class='header'>
 <!--img top begin-->

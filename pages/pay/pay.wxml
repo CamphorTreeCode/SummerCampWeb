@@ -1,5 +1,9 @@
 <!--pages/pay/pay.wxml-->
 <!--灰色栏-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class='line'></view>
 <!--头部订单详情-->
 <view class='headTitle'>

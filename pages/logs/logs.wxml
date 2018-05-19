@@ -1,4 +1,8 @@
 <!--logs.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <import src="/wxParse/wxParse.wxml" />
 <view class="container log-list">
   <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color='rgb(0,0,0)' indicator-active-color='rgb(129,0,0)' circular='{{circular}}'>

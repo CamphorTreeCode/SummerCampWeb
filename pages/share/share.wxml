@@ -1,4 +1,8 @@
 <!--pages/share/share.wxml-->
+<!--遮罩-->
+<my-component>
+</my-component>
+<!--遮罩-->
 <view class='text'>
 
 <view class="tex">
