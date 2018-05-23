@@ -51,5 +51,9 @@ Page({
       hasUserInfo: true
     })
   },
-  
+  onShareAppMessage: function () {
+    return {
+      imageUrl: app.globalData.shareImg
+    }
+  },
 })

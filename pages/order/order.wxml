@@ -16,7 +16,6 @@
 </view>
 <!-- 空隙-->
 <!-- 内容-->
-
 <block wx:for-items='{{orderList}}'>
 <view class="separate"></view>
 <view class='orderList'>

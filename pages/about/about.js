@@ -136,7 +136,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      imageUrl: app.globalData.shareImg
+    }
   },
   member: function () {
     wx.navigateTo({
@@ -155,7 +157,7 @@ Page({
   },
   contact:function(e){
     wx.makePhoneCall({
-      phoneNumber: '021-66070777' //仅为示例，并非真实的电话号码
+      phoneNumber: '4000062500' //仅为示例，并非真实的电话号码
     })
   },
   message: function(){

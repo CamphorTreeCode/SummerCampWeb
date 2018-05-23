@@ -109,7 +109,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      imageUrl: app.globalData.shareImg
+    }
   },
   updateEnlistPage(e){
     console.log(e, e.currentTarget.dataset.enlistid, e.currentTarget.dataset.orderid)

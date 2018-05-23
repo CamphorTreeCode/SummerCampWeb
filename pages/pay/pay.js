@@ -1,4 +1,4 @@
-{}// pages/pay/pay.js
+// pages/pay/pay.js
 var app = getApp();
 Page({
 
@@ -111,7 +111,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      imageUrl: app.globalData.shareImg
+    }
   },
   payment:function(){
     var that = this;
@@ -140,13 +142,14 @@ Page({
       success: function (res) {
       console.log(res)
       if(!res.data.payState){
+        var orderId = res.data.orderId
         wx.showModal({
           title: '提示',
           content: '请填写完整报名表再进行支付',
           success: function (res) {
             if (res.confirm) {
               wx.navigateTo({
-                url: '/pages/applicationForm/applicationForm?openId=' + openId,
+                url: '/pages/applicationForm/applicationForm?orderId=' + orderId,
               })
               that.setData({
                 payments: true
@@ -208,7 +211,7 @@ Page({
   sign: function (prepay_id, orderId) {
     var that = this;
     wx.request({
-      url: app.globalData.appUrl + '/WXPay/sign',
+      url: app.globalData.url + '/WXPay/sign',
       method: 'POST',
       header: {
         // 'content-type': 'application/x-www-form-urlencoded' // 默认值
@@ -250,7 +253,7 @@ Page({
         })
         if (res.errMsg == 'requestPayment:ok') {
         wx.request({
-          url: app.globalData.appUrl + '/wxOrder/updateOrder',
+          url: app.globalData.url + '/wxOrder/updateOrder',
           method: 'get',
           header: {
             // 'content-type': 'application/x-www-form-urlencoded' // 默认值

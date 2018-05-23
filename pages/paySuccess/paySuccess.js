@@ -157,6 +157,7 @@ Page({
     return {
       title: '想对你说',
       path: '/pages/share/share?enlistHomeExpectText=' + this.data.enlistHomeExpectText,
+      imageUrl: app.globalData.paySuccessImg,
       success: function (res) {
         // 转发成功
         console.info('成功')

@@ -7,7 +7,7 @@
 <view class='line'></view>
 <!--头部订单详情-->
 <view class='headTitle'>
-   <image src='https://www.chuanshoucs.com/ServerImg/2018-04-18/e4c4a539-de11-49ff-a281-a65a2261a080.jpg' mode='aspectFill'></image>
+   <image src='{{releaseProject.releaseProjectSwiper[0].releseProjectSwiperImg}}' mode='aspectFill'></image>
    <view class='projectTitle'>{{releaseProject.relaaseProjectTitle}}</view>
    <view class='projectContent'>{{releaseProject.releaseProjectZhengWeng}}</view>
 </view>

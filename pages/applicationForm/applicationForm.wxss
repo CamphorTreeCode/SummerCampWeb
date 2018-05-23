@@ -4,8 +4,20 @@
 /*头部标题特殊样式*/
 .head{ font-size: 1.1rem;}
 /*title样式*/
-.title{ height: 100rpx; padding: 0 1rem; line-height: 100rpx; color: #333;}
+.title{ height: 100rpx; padding: 0 1rem; line-height: 100rpx; color: #888;}
+.title22{
+  padding-top: 20rpx;
+height: 130rpx;
+line-height: 65rpx;
+font-size: 38rpx;
+}
+
 .title image{ width: 40rpx; height: 40rpx; float: left; margin:33rpx 0.6rem 0 0;}
+.title22 image{
+margin-bottom: 40rpx;
+margin-top: 18rpx;
+}
+
 
 /*表单属性*/
 .formProperty{ padding: 0 1rem; height: 100rpx; line-height:100rpx; color: #333; overflow: hidden;}
@@ -23,8 +35,8 @@
 .radio{ overflow: hidden;}
 .radio radio{ float: right;}
 .radio radio.true{ margin-right: 1.8rem;}
-/*身高特殊样式*/
-.unit input{ float:  left; width: 50%;}
+/*身高特殊样式 width: 50%;*/
+.unit input{ float:  left; }
 .unit .foot{ float: right; color:#8A0000;}
 /*身体情况下边框*/
 .body{ border: 1px solid #f2f2f2;}
@@ -32,8 +44,8 @@
 .allergy{padding:1rem 1rem 0.3rem; height: 200rpx; overflow: hidden;}
 .allergy textarea{ width: 100%; color: #333; height: 200rpx;}
 /*家长意见输入框*/
-.personMessage{padding: 0 1rem 0.3rem; height: 200rpx; overflow: hidden;}
+.personMessage{padding: 0 1rem 0.3rem; height: 350rpx; overflow: hidden;}
 .personMessage textarea{ width: 100%; color: #333;}
 
 /*提交按钮*/
-.submit{ width: 94%; background-color: #8A0000; color: #fff; margin: 16rem  auto 2rem;}
+.submit{ width: 94%; background-color: #8A0000; color: #fff; margin: 10rem  auto 2rem;}

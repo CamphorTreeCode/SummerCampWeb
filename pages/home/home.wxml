@@ -14,7 +14,7 @@
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#fff" indicator-active-color="#8B0000" circular="true">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
-          <image src="{{item.swiperUrl}}" class="slide-image" data-releaseprojectid='{{item.releaseProjectId}}' bindtap='locatingProject'/>
+          <image src="{{item.swiperUrl}}" mode="aspectFill" class="slide-image" data-releaseprojectid='{{item.releaseProjectId}}' bindtap='locatingProject'/>
         </swiper-item>
       </block>
     </swiper>
@@ -33,7 +33,7 @@
             <view class="about-look">查看详情</view>
           </view>
         </view>
-        <image src="{{item.releaseProjectSwiper[0].releseProjectSwiperImg}}" class="img"></image>
+        <image src="{{item.releaseProjectSwiper[0].releseProjectSwiperImg}}" class="img" mode="aspectFill"></image>
         <view class="about-footer">
           <text>{{item.releaseProjectZhengWeng}}</text>
         </view>

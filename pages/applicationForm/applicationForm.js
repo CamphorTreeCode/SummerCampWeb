@@ -16,6 +16,14 @@
      })
      return false;
    }
+   if (enlist.enlistAge == '') {
+     wx.showToast({
+       title: '请填年龄',
+       icon: 'none',
+       duration: 2000
+     })
+     return false;
+   }
    if (enlist.enlistBirthDay == '') {
      wx.showToast({
        title: '请填写出生日期',
@@ -34,7 +42,7 @@
    }
    if (enlist.enlistCardNumber == '') {
      wx.showToast({
-       title: '请填写',
+       title: '请填写证件号码',
        icon: 'none',
        duration: 2000
      })
@@ -123,7 +131,7 @@ if (enlist.enlistMuslimIs == '') {
   }
   if (enlist.enlistFatherName == '') {
     wx.showToast({
-      title: '请填写你父亲的姓名',
+      title: '请填写父亲的姓名',
       icon: 'none',
       duration: 2000
     })
@@ -131,7 +139,7 @@ if (enlist.enlistMuslimIs == '') {
   }
   if (enlist.enlistFatherPhone == '') {
     wx.showToast({
-      title: '请填写你父亲的手机',
+      title: '请填写父亲的手机',
       icon: 'none',
       duration: 2000
     })
@@ -139,7 +147,7 @@ if (enlist.enlistMuslimIs == '') {
   }
   if (enlist.enlistMotherName == '') {
     wx.showToast({
-      title: '请填写你母亲的姓名',
+      title: '请填写母亲的姓名',
       icon: 'none',
       duration: 2000
     })
@@ -147,7 +155,7 @@ if (enlist.enlistMuslimIs == '') {
   }
   if (enlist.enlistMotherPhone == '') {
     wx.showToast({
-      title: '请填写你母亲的手机',
+      title: '请填写母亲的手机',
       icon: 'none',
       duration: 2000
     })
@@ -186,6 +194,7 @@ Page({
   onLoad: function (options) {
     var that = this;
    console.log(options)
+  
   that.setData({
     orderId:options.orderId,
     enlistId: options.enlistId
@@ -260,7 +269,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      imageUrl: app.globalData.shareImg
+    }
   },
   IdCardType:function(){
 
@@ -338,7 +349,8 @@ e.detail.value.enlistCard = e.detail.value.enlistCard == "身份证" ? 0 : e.det
         
           }
      
-     }})
+     }
+     })
    }
  
 })

@@ -9,7 +9,7 @@
 <!--标题栏-->
 <view class='title head'>
    <image src='/image/applicationForm/baoming.png '></image>
-    牛仔训练营报名表
+    成长赢地报名表
 </view>
 <!--灰色栏-->
 <view class='line'></view>
@@ -38,7 +38,7 @@
      <text>出生日期：</text>
      <!-- <input id="enlistBirthDay" name="enlistBirthDay" type='text' value="{{enlist.enlistBirthDay}}" placeholder='请输入出生日期'></input> -->
           <picker mode="date" value="{{date}}" start="1949-10-01" end="3000-10-01" bindchange="bindDateChange">
-     <input id="enlistBirthDay" class='picker' name="enlistBirthDay" type='text' placeholder='请输入出生日期' value='{{date}}'></input>
+     <input id="enlistBirthDay" class='picker' name="enlistBirthDay" type='text' placeholder='请输入出生日期' value='{{date}}' disabled="false"></input>
      
     </picker>
 </view>
@@ -78,8 +78,8 @@
    <image src='/image/applicationForm/jiankang.png '></image>
     <text>身体是否健康</text>
      <radio-group id="enlistHealthyIs" name="enlistHealthyIs" class="radio-group" style="float:right;" bindchange="radioChange">
-     <radio value="0"  checked="{{enlist.enlistHealthyIs==0}}" color=' #8A0000'>否</radio>
-     <radio value="1" class='true' checked="{{enlist.enlistHealthyIs==1}}" color=' #8A0000'>是</radio>
+     <radio value="0"  checked="{{enlist.enlistHealthyIs==0}}" checked="true" color=' #8A0000'>是</radio>
+     <radio value="1" class='true' checked="{{enlist.enlistHealthyIs==1}}" color=' #8A0000'>否</radio>
      </radio-group>
 </view>
 <!--灰色栏-->
@@ -91,7 +91,7 @@
     <text>体重：</text><input id="enlistWeight" name="enlistWeight" type='text' value="{{enlist.enlistWeight}}"  placeholder='请填写体重'></input><text class='foot'>kg</text>
 </view>
 <view class='formProperty body'>
-     <text>鞋子尺码：</text><input id="enlistShoeSize" name="enlistShoeSize" type='text' value="{{enlist.enlistShoeSize}}"  placeholder='请填写鞋子尺'></input>
+     <text>鞋子尺码：</text><input id="enlistShoeSize" name="enlistShoeSize" type='text' value="{{enlist.enlistShoeSize}}"  placeholder='请填写鞋子尺码'></input>
 </view>
 
 <view class='formProperty body radio'>
@@ -145,12 +145,22 @@
 </view>
 <!--灰色栏-->
 <view class='line'></view>
-<view class='title'>
+<view class='title  title22'>
    <image src='/image/applicationForm/aixin.png '></image>
-     家长寄语（50字以内）:
+   家长期待（家长对营队教官的嘱托 50字以内）
 </view>
 <view class='personMessage'>
-    <textarea id="enlistHomeExpectText" value="{{enlist.enlistHomeExpectText}}" name="enlistHomeExpectText" maxlength='50' placeholder='请填写家长寄语'></textarea>
+    <textarea id="enlistExpectTextInstructor" value="{{enlist.enlistExpectTextInstructor}}" name="enlistExpectTextInstructor" maxlength='50' placeholder='请填写家长期待' ></textarea>
+</view>
+
+<view class='line'></view>
+<view class='title title22'>
+   <image src='/image/applicationForm/aixin.png '></image>
+     想对孩子说点什么？（您的话将生成卡片，可以分享给孩子）
+</view>
+<view class='personMessage'>
+    <textarea id="enlistHomeExpectText" value="{{enlist.enlistHomeExpectText}}" name="enlistHomeExpectText" placeholder='请填写想对孩子说的话' maxlength='50'></textarea>  
+    <!--提交  -->
 </view>
     <button class='submit' form-type='submit'>提交</button>
 </form>
