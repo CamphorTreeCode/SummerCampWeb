@@ -41,7 +41,7 @@ image {
 margin:0 auto;
 height:30rpx;
 width:58%;
-margin-top:22%;
+margin-top:27%;
 
 }
 .gglogo{
@@ -65,6 +65,6 @@ margin-bottom:58%;
 .ggphone{
   font-size:  0.69rem;
   color:#D1D1D1;
-    margin:0 auto;
-    width: 30%;
+  margin:0 auto;
+  width: 30%;
 }

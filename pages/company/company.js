@@ -83,7 +83,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: app.globalData.shareTitle
     }
   },
 })

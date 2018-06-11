@@ -112,7 +112,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: app.globalData.shareTitle
     }
   },
   payment:function(){
@@ -185,7 +186,8 @@ Page({
                 releaseProject,
                 releaseProjectId: that.data.releaseProjectId,
                 orderMoney: that.data.orderMoney,
-                orderId: that.data.orderIds
+                orderId: that.data.orderIds,
+                relaaseProjectTitle: that.data.releaseProject.relaaseProjectTitle
               },
               success: function (res) {
                 var prepay_id = res.data.prepay_id;

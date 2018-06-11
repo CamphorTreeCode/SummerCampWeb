@@ -15,7 +15,8 @@ Page({
   onLoad: function (options) {
     console.log(options)
     this.setData({
-      enlistHomeExpectText: options.enlistHomeExpectText
+      enlistHomeExpectText: options.enlistHomeExpectText,
+      title:"成长 才能赢  来吗?"
       })
   },
 

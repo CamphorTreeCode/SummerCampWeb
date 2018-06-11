@@ -145,7 +145,8 @@ var that = this
    */
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: app.globalData.shareTitle
     }
   },
   locatingProject: function (e) {

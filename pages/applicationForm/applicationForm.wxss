@@ -35,8 +35,8 @@ margin-top: 18rpx;
 .radio{ overflow: hidden;}
 .radio radio{ float: right;}
 .radio radio.true{ margin-right: 1.8rem;}
-/*身高特殊样式 width: 50%;*/
-.unit input{ float:  left; }
+/*身高特殊样式 ;*/
+.unit input{ float:  left; width: 56%}
 .unit .foot{ float: right; color:#8A0000;}
 /*身体情况下边框*/
 .body{ border: 1px solid #f2f2f2;}
@@ -49,3 +49,14 @@ margin-top: 18rpx;
 
 /*提交按钮*/
 .submit{ width: 94%; background-color: #8A0000; color: #fff; margin: 10rem  auto 2rem;}
+
+textarea{
+  display:block;
+height:100rpx;
+text-overflow:clip;
+overflow:hidden;
+white-space:nowrap;
+font-family:UICTFontTextStyleBody;
+min-height:100rpx;
+
+}

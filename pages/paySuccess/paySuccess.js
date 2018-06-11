@@ -23,9 +23,18 @@ Page({
     var enlistHomeExpectText = options.enlistHomeExpectText
   
     var that = this
-    that.setData({
-      enlistHomeExpectText: enlistHomeExpectText
-    })
+    if (enlistHomeExpectText == null || enlistHomeExpectText==''){
+      that.setData({
+        showWishes: "none",
+        showShade:"none",
+        showWishes:"none"
+      }) 
+    }else{
+      that.setData({
+        enlistHomeExpectText: enlistHomeExpectText
+      })
+    }
+
     
     var OpenId = app.returnOpenId()
     if (orderId==null){

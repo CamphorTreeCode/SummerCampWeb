@@ -29,14 +29,20 @@ function selectOrderState(that,orderState){
     
  
       if (res.data[0].lists.length>0){
-
+        
         var orderList = that.data.orderList
         for (var i = 0; i < res.data[0].lists.length;i++){
+          if (res.data[0].lists[i].releaseProject.length==0){
+ 
+           res.data[0].lists[i].releaseProject[0]=JSON.parse(res.data[0].lists[i].orderContent)
+           console.log(res.data[0].lists[i])
+          }
           orderList.push(res.data[0].lists[i])
         }
+      
      
       
-        console.info(res.data[0].lists, orderList)
+      console.info(res.data[0].lists, orderList)
       that.setData({
         orderList
       })
@@ -141,7 +147,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: "成长 才能赢  来吗"
     }
   },
   navigation:function(e){

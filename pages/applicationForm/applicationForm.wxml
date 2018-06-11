@@ -85,7 +85,9 @@
 <!--灰色栏-->
 <view class='line'></view>
 <view class='formProperty body unit'>
-    <text>身高：</text><input id="enlistHeight" name="enlistHeight" value="{{enlist.enlistHeight}}" type='text'  placeholder='请填写身高'></input><text class='foot'>cm</text>
+    <text>身高：</text>
+    <input id="enlistHeight" name="enlistHeight" value="{{enlist.enlistHeight}}" type='text'   placeholder='请填写身高'></input>
+    <text class='foot'>cm</text>
 </view>
 <view class='formProperty body unit'>
     <text>体重：</text><input id="enlistWeight" name="enlistWeight" type='text' value="{{enlist.enlistWeight}}"  placeholder='请填写体重'></input><text class='foot'>kg</text>
@@ -147,7 +149,7 @@
 <view class='line'></view>
 <view class='title  title22'>
    <image src='/image/applicationForm/aixin.png '></image>
-   家长期待（家长对营队教官的嘱托 50字以内）
+   <span style="color:#333">家长期待</span>（家长对营队教官的嘱托 50字以内）
 </view>
 <view class='personMessage'>
     <textarea id="enlistExpectTextInstructor" value="{{enlist.enlistExpectTextInstructor}}" name="enlistExpectTextInstructor" maxlength='50' placeholder='请填写家长期待' ></textarea>
@@ -156,7 +158,7 @@
 <view class='line'></view>
 <view class='title title22'>
    <image src='/image/applicationForm/aixin.png '></image>
-     想对孩子说点什么？（您的话将生成卡片，可以分享给孩子）
+       <span style="color:#333">想对孩子说点什么？</span>（您的话将生成卡片，可以分享给孩子）
 </view>
 <view class='personMessage'>
     <textarea id="enlistHomeExpectText" value="{{enlist.enlistHomeExpectText}}" name="enlistHomeExpectText" placeholder='请填写想对孩子说的话' maxlength='50'></textarea>  

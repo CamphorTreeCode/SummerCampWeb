@@ -81,10 +81,11 @@ App({
   globalData: {
    
   userInfo: null,
-  url:"https://www.pacata.xyz/SummerCamp/",
-   // url: "http://localhost/SummerCamp/",
+url:"https://www.pacata.xyz/SummerCamp/",
+//url: "http://localhost/SummerCamp/",
    appUrl: "https://www.pacata.xyz/SummerCamp/", 
    shareImg:"https://www.chuanshoucs.com/ServerImg/2018-05-21/180d7914-572e-401d-ae95-bb1273147b71.png",
-   paySuccessImg:'https://www.chuanshoucs.com/ServerImg/2018-05-23/0813c447-75c4-440f-987d-3d757162635f.jpg'    
+   paySuccessImg:'https://www.chuanshoucs.com/ServerImg/2018-05-23/0813c447-75c4-440f-987d-3d757162635f.jpg',
+   shareTitle: "成长 才能赢 来吗?"    
   }
 })

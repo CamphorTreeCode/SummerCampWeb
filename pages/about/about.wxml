@@ -15,11 +15,11 @@
   <image src='../../image/guanyu/baoming.png'></image>
   <text>我的报名表</text>
 </view>
-<view class="line"></view>
-<view class='group'  bindtap='company'>
+<!-- <view class="line"></view> -->
+<!-- <view class='group'  bindtap='company'>
   <image src='../../image/guanyu/yinghang.png'></image>
   <text>公司简介</text>
-</view>
+</view> -->
 <view class="line"></view>
 <view class='group' bindtap='contact'>
   <image src='../../image/guanyu/kefu.png'></image>

@@ -85,7 +85,7 @@ Page({
           //  /*集结地点图片*/
           //  releaseProjectHomeUrl: res.data.releaseProjectHomeUrl.split(",") == '' ? [] : res.data.releaseProjectHomeUrl.split(","),
           //  /*项目金额*/
-          //  relaaseProjectMoney: res.data.relaaseProjectMoney,
+          relaaseProjectMoney: res.data.relaaseProjectMoney,
           //  //活动json图片
           //  releaseProjectActivityUrl: res.data.releaseProjectActivityUrl.split(",") == '' ? [] : res.data.releaseProjectActivityUrl.split(","),
           //  //报名存放图片的json图片
@@ -107,7 +107,7 @@ Page({
           //  //导师介绍内容存放的图片
           //  releaseProjectIntroduceUrl: res.data.releaseProjectIntroduceUrl.split(",") == '' ? [] : res.data.releaseProjectIntroduceUrl.split(","),
           //  /*项目标题*/
-          //  relaaseProjectTitle: res.data.relaaseProjectTitle,
+           relaaseProjectTitle: res.data.relaaseProjectTitle,
           //  /*活动类型*/
           //  releaseProjectActivityType: res.data.releaseProjectActivityType ,
           //  /*报名条件*/
@@ -163,7 +163,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: app.globalData.shareTitle
     }
   },
 })

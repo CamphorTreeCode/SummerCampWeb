@@ -161,16 +161,16 @@ if (enlist.enlistMuslimIs == '') {
     })
     return false;
   }
-  if (enlist.enlistHomeExpectText == '') {
-    wx.showToast({
-      title: '请填写家长期待',
-      icon: 'none',
-      duration: 2000
-    })
-    return false;
-  }
-  return true;
-}
+//   if (enlist.enlistExpectTextInstructor == '') {
+//     wx.showToast({
+//       title: '请填写对孩子说的话',
+//       icon: 'none',
+//       duration: 2000
+//     })
+//     return false;
+//   }
+   return true;
+ }
 var app = getApp()
 Page({
 
@@ -270,7 +270,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      imageUrl: app.globalData.shareImg
+      imageUrl: app.globalData.shareImg,
+      title: app.globalData.shareTitle
     }
   },
   IdCardType:function(){
